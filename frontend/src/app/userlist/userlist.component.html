@@ -1,0 +1,26 @@
+<div class="container container-fluid">
+    
+</div>
+
+<div *ngIf="showUser">
+<h1 style="text-align: center;">All Users</h1>
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Email</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr scope="row" *ngFor="let user of users">
+            <td>{{ user.firstName }}</td>
+            <td>{{ user.lastName }}</td>
+            <td>{{ user.email }}</td>
+        </tr>
+    </tbody>
+</table>
+<button id="hide" class="btn btn-danger" (click)="closeUserList()">Hide</button>
+</div>
+

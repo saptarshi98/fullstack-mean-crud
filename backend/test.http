@@ -1,0 +1,8 @@
+GET http://localhost:3080/data/item
+Content-Type: application/json
+
+{
+    "firstname":"dhonu",
+    "lastname":"haldar",
+    "email":"me@me2.com"
+}
