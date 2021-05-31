@@ -1,8 +1,8 @@
-#all{
+.table{
     margin: 10px;
 }
 
-#hide{
+#head{
+    text-align: center;
     margin: auto;
-    display: block;
 }

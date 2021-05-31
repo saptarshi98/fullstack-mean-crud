@@ -10,19 +10,14 @@ export class UserlistComponent implements OnInit {
   public users = [] as any;
   constructor(private _userlist: UserService) {
    }
-   showAll(){
-     this.showUser = true;
-    this._userlist.getUser()
-    .subscribe(data=>this.users = data)
-   }
-   showUser = false;
-   closeUserList(){
-     this.showUser= false;
-   }
-   fun(){
-     console.log("Hello")
-   }
+   showLength = false;
+   count=0;
   ngOnInit(): void {
+    this.showLength = true;
+    this._userlist.getUser()
+    .subscribe(data=>{
+      this.users = data; 
+    })
     
   }
 

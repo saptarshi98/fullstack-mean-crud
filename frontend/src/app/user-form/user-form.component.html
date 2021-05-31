@@ -1,4 +1,5 @@
 <div class="container container-fluid">
+<div>
     <h1 style="text-align: center;"> Welcome!</h1>
 
 <div class="card form">
@@ -31,10 +32,16 @@
 
 <div class="card count">
     <div class="card-body">
-        <h2>Users : {{count}} </h2>
+        <h2>Users : {{users.length}} </h2>
 
-        <button id ="all" class="btn btn-warning" (click)="userlist.fun()">Get All</button>
+        <button id ="all" class="btn btn-warning" (click)="fun()">Get All</button>
     </div>
+</div>
+
+</div>
+<div *ngIf="h" style="float: left; clear: left; width: 100%">
+    <userlist></userlist>
+    <button class="btn btn-danger" (click)="h=false" style="margin: auto; display: block;">Hide</button>
 </div>
 
 </div>
